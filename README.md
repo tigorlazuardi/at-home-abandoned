@@ -149,19 +149,19 @@ File inside `src/pages` will be the webpage route, there are 2 things that need 
 Snippets: `np`
 
 ```tsx
-import * as React from 'react';
-import Seo from '@/components/Seo';
+import * as React from 'react'
+import Seo from '@/components/Seo'
 export default function TestPage() {
-  return (
-    <>
-      <Seo templateTitle='Test' />
-      <main>
-        <section className=''>
-          <div className='layout'></div>
-        </section>
-      </main>
-    </>
-  );
+	return (
+		<>
+			<Seo templateTitle='Test' />
+			<main>
+				<section className=''>
+					<div className='layout'></div>
+				</section>
+			</main>
+		</>
+	)
 }
 ```
 
@@ -172,9 +172,9 @@ To make a new component, It is encouraged to use `export default function`. Beca
 Snippets: `rc`
 
 ```tsx
-import * as React from 'react';
+import * as React from 'react'
 export default function Component() {
-  return <div></div>;
+	return <div></div>
 }
 ```
 
@@ -183,7 +183,7 @@ export default function Component() {
 Snippets: `ir`
 
 ```tsx
-import * as React from 'react';
+import * as React from 'react'
 ```
 
 ### Import Next Image
@@ -191,7 +191,7 @@ import * as React from 'react';
 Snippets: `imimg`
 
 ```tsx
-import Image from 'next/image';
+import Image from 'next/image'
 ```
 
 ### Import Next Link
@@ -199,7 +199,7 @@ import Image from 'next/image';
 Snippets: `iml`
 
 ```tsx
-import Link from 'next/link';
+import Link from 'next/link'
 ```
 
 ### useState Hook
@@ -207,7 +207,7 @@ import Link from 'next/link';
 Snippets: `us`
 
 ```tsx
-const [state, setState] = React.useState(initialState);
+const [state, setState] = React.useState(initialState)
 ```
 
 ### useEffect Hook
@@ -215,7 +215,7 @@ const [state, setState] = React.useState(initialState);
 Snippets: `uf`
 
 ```tsx
-React.useEffect(() => {}, []);
+React.useEffect(() => {}, [])
 ```
 
 ### useReducer Hook
@@ -223,7 +223,7 @@ React.useEffect(() => {}, []);
 Snippets: `ur`
 
 ```tsx
-const [state, dispatch] = React.useReducer(someReducer, {});
+const [state, dispatch] = React.useReducer(someReducer, {})
 ```
 
 ### useRef Hook
@@ -231,7 +231,7 @@ const [state, dispatch] = React.useReducer(someReducer, {});
 Snippets: `urf`
 
 ```tsx
-const someRef = React.useRef();
+const someRef = React.useRef()
 ```
 
 ### Region Comment

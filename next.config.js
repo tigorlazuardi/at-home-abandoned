@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  eslint: {
-    dirs: ['src'],
-  },
+	eslint: {
+		dirs: ['src'],
+	},
 
-  reactStrictMode: true,
+	reactStrictMode: true,
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
-};
+	// Uncoment to add domain whitelist
+	// images: {
+	//   domains: [
+	//     'res.cloudinary.com',
+	//   ],
+	// },
+}
