@@ -1,11 +1,17 @@
 import clsx from 'clsx'
 import * as React from 'react'
 
-import SideBar from '../Sidebar'
+import SideBar from '../Sidebar/Sidebar'
 
-export default function Layout({ children, dark }: { children: React.ReactNode; dark?: boolean }) {
+export default function Layout({
+	children,
+	dark,
+}: {
+	children: React.ReactNode
+	dark?: boolean
+}) {
 	return (
-		<div className={clsx({['h-screen']: true, dark, ['bg-dark']: dark})}>
+		<div className={clsx({ ['h-screen']: true, dark, ['bg-dark']: dark })}>
 			<SideBar />
 			{children}
 		</div>

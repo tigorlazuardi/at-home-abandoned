@@ -36,8 +36,9 @@
 		font-weight: 100 900;
 		font-display: optional;
 		src: url('/fonts/inter-var-latin.woff2') format('woff2');
-		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074,
-			U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+			U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+			U+2212, U+2215, U+FEFF, U+FFFD;
 	}
 
 	.cursor-newtab {
@@ -85,12 +86,17 @@
 @layer utilities {
 	.animated-underline {
 		background-image: linear-gradient(#33333300, #33333300),
-			linear-gradient(to right, var(--clr-primary-400), var(--clr-primary-500));
+			linear-gradient(
+				to right,
+				var(--clr-primary-400),
+				var(--clr-primary-500)
+			);
 		background-size: 100% 2px, 0 2px;
 		background-position: 100% 100%, 0 100%;
 		background-repeat: no-repeat;
 		transition: 0.3s ease;
-		transition-property: background-size, color, background-color, border-color;
+		transition-property: background-size, color, background-color,
+			border-color;
 	}
 	.animated-underline:hover,
 	.animated-underline:focus-visible {
@@ -99,5 +105,9 @@
 }
 
 .sidebar-icons {
-	@apply flex relative justify-center items-center mx-auto w-12 h-12 text-green-500 rounded-3xl transition-all duration-200 bg-discord-300 hover:bg-green-600 hover:text-white hover:rounded-xl dark:text-green-700 dark:hover:text-white dark:bg-discord-700 ease-linear;
+	@apply relative flex items-center justify-center w-12 h-12 mx-auto text-green-500 transition-all duration-200 ease-linear rounded-3xl bg-discord-300 hover:bg-green-600 hover:text-white hover:rounded-xl dark:text-green-500 dark:hover:text-white dark:bg-discord-700 dark:hover:bg-green-600;
+}
+
+.sidebar-tooltip-scale-0 {
+	@apply absolute z-50 w-auto p-2 m-2 text-xs font-bold text-white transition-all duration-100 origin-right scale-0 rounded-md shadow-md left-14 min-w-max bg-discord-900 2xl:text-lg sm-max:hidden dark:bg-discord-700;
 }
