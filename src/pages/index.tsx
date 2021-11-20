@@ -7,7 +7,7 @@ import Seo from '@/components/Seo'
 export default function LearnPage(): JSX.Element {
 	const image = 'https://via.placeholder.com/64x64'
 	return (
-		<Layout>
+		<Layout dark={false}>
 			<Seo />
 			<main className='bg-white dark:bg-dark dark:text-white text-dark'>
 				<section className='container py-2'>

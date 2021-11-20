@@ -97,3 +97,7 @@
 		background-size: 0 2px, 100% 2px;
 	}
 }
+
+.sidebar-icons {
+	@apply flex relative justify-center items-center mx-auto w-12 h-12 text-green-500 rounded-3xl transition-all duration-200 bg-discord-300 hover:bg-green-600 hover:text-white hover:rounded-xl dark:text-green-700 dark:hover:text-white dark:bg-discord-700 ease-linear;
+}
