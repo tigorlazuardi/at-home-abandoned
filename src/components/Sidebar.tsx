@@ -21,7 +21,7 @@ const SideBar = (prop: SideBarProp) => {
 
 interface SideBarIconProp {
 	icon: React.ReactElement
-	text?: string
+	text: string
 }
 
 const SideBarIcon = ({ icon, text }: SideBarIconProp) => {
@@ -39,21 +39,18 @@ const SideBarIcon = ({ icon, text }: SideBarIconProp) => {
 }
 
 interface TooltipProp {
-	text?: string
+	text: string
 }
 
-const Tooltip = ({ text }: TooltipProp) =>
-	text ? (
-		<span
-			className={`absolute w-auto p-2 m-2 min-w-max left-14
+const Tooltip = ({ text }: TooltipProp) => (
+	<span
+		className={`absolute w-auto p-2 m-2 min-w-max left-14
 						rounded-md shadow-md text-white bg-discord-900
 						text-xs lg:text-lg fon-bold transition-all duration-100
 						scale-0 origin-right group-hover:scale-100 sm-max:hidden`}
-		>
-			{text}
-		</span>
-	) : (
-		<></>
-	)
+	>
+		{text}
+	</span>
+)
 
 export default SideBar

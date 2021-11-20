@@ -1,6 +1,12 @@
 import * as React from 'react'
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-	// Put Header or Footer Here
-	return <>{children}</>
+import SideBar from '../Sidebar'
+
+export default function Layout({ children, dark }: { children: React.ReactNode, dark?: boolean }) {
+	return (
+		<div className={dark ? 'dark' : ''}>
+			<SideBar />
+			{children}
+		</div>
+	)
 }
