@@ -5,7 +5,7 @@ import Seo from '@/components/Seo'
 
 export default function LearnPage(): JSX.Element {
 	return (
-		<Layout dark={true}>
+		<Layout>
 			<Seo />
 			<main className='bg-white dark:bg-dark dark:text-white text-dark'>
 				<section className='container py-2'>
