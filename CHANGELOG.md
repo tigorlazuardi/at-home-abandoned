@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Conf
+- **lefthook:** hook for prettier now add staged files
+
 ### Doc
 - added changelog
 
