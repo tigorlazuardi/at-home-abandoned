@@ -7,5 +7,6 @@ pre-commit:
     prettier:
       glob: "*.{js,jsx,ts,tsx,json,css,scss,md}"
       run: npx prettier -w {staged_files}
-
-
+commit-msg:
+  commitline:
+    run: npx --no-install commitlint --edit "$1"
