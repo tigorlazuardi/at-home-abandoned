@@ -5,6 +5,7 @@
 - lint fixes
 
 ### Conf
+- **lefthook:** eslint hook now have fix flag
 - **lefthook:** added markdown support
 - **lefthook:** hook for prettier now add staged files
 
