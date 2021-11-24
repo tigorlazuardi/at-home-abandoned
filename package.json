@@ -6,18 +6,12 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"lint:fix": "eslint src --fix && yarn format",
-		"lint:strict": "eslint --max-warnings=0 src",
-		"tsc": "tsc --noEmit",
 		"test:watch": "jest --watch",
 		"test": "jest",
-		"format": "prettier -w src",
-		"format:check": "prettier -c src",
 		"release": "standard-version",
 		"push-release": "git push --follow-tags origin main",
 		"postbuild": "next-sitemap",
-		"prepare": "husky install"
+		"prepare": "lefthook install"
 	},
 	"dependencies": {
 		"@tailwindcss/forms": "^0.3.4",
@@ -42,10 +36,8 @@
 		"eslint-config-next": "^11.1.2",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"husky": "^7.0.4",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^27.3.1",
-		"lint-staged": "^11.2.6",
 		"next-sitemap": "^1.6.203",
 		"postcss": "^8.3.11",
 		"prettier": "^2.4.1",
@@ -53,14 +45,5 @@
 		"standard-version": "^9.3.2",
 		"tailwindcss": "^2.2.19",
 		"typescript": "^4.4.4"
-	},
-	"lint-staged": {
-		"src/**/*.{js,jsx,ts,tsx,}": [
-			"eslint --max-warnings=0",
-			"prettier -w"
-		],
-		"src/**/*.{json,css,scss,md}": [
-			"prettier -w"
-		]
 	}
 }

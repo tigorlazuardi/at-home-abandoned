@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true 
+  commands:
+    eslint:
+      glob: "*.{js,jsx,ts,tsx}"
+      run: npx eslint --max-warnings=0 {staged_files}
+    prettier:
+      glob: "*.{js,jsx,ts,tsx,json,css,scss,md}"
+      run: npx prettier -w {staged_files}
+
+
