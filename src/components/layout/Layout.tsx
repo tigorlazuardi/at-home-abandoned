@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 			className={clsx({
 				['h-screen']: true,
 				dark: dark,
-				['bg-dark']: dark,
+				['bg-discord-900']: dark,
 			})}
 		>
 			<SideBar

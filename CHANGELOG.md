@@ -10,6 +10,7 @@
 
 ### Feat
 - **dark-mode:** dark mode now persistent via local storage
+- **main-page:** added introductory text
 
 ### Fix
 - **changelog:** fixed changelog format
