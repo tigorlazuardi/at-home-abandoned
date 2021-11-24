@@ -1,12 +1,28 @@
 pre-commit:
-  parallel: true 
-  commands:
-    eslint:
-      glob: "*.{js,jsx,ts,tsx}"
-      run: npx eslint --max-warnings=0 {staged_files}
-    prettier:
-      glob: "*.{js,jsx,ts,tsx,json,css,scss,md}"
-      run: npx prettier -w {staged_files}
+    parallel: true
+    commands:
+        eslint:
+            glob: '*.{js,jsx,ts,tsx}'
+            run: npx eslint --max-warnings=0 {staged_files}
+        prettier:
+            glob: '*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml}'
+            run: npx prettier -w {staged_files}
 commit-msg:
-  commitline:
-    run: npx --no-install commitlint --edit "$1"
+    commitline:
+        run: npx --no-install commitlint --edit "$1"
+
+post-commit:
+    parallel: true
+    commands:
+        changelog:
+            run: lefthook run changelog
+
+changelog:
+    piped: true
+    commands:
+        1_create:
+            run: git-chglog -o CHANGELOG.md
+        2_add:
+            run: LEFTHOOK=0 git add CHANGELOG.md
+        3_commit:
+            run: LEFTHOOK=0 git commit --amend --no-edit
