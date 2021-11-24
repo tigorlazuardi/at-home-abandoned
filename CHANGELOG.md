@@ -1,6 +1,9 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Chore
+- lint fixes
+
 ### Conf
 - **lefthook:** added markdown support
 - **lefthook:** hook for prettier now add staged files

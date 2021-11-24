@@ -1,8 +1,8 @@
 import * as React from 'react'
 
 import Layout from '@/components/layout/Layout'
-import Seo from '@/components/Seo'
 import Introductory from '@/components/MainPage/Introductory'
+import Seo from '@/components/Seo'
 
 export default function LearnPage(): JSX.Element {
 	return (
