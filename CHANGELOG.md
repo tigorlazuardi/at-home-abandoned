@@ -2,6 +2,7 @@
 ## [Unreleased]
 
 ### Conf
+- **lefthook:** added markdown support
 - **lefthook:** hook for prettier now add staged files
 
 ### Doc

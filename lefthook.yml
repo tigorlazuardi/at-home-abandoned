@@ -5,7 +5,8 @@ pre-commit:
             glob: '*.{js,jsx,ts,tsx}'
             run: npx eslint --max-warnings=0 {staged_files}
         prettier:
-            glob: '*.{js,jsx,ts,tsx,json,css,scss,yml,yaml}'
+            glob: '*.{js,jsx,ts,tsx,json,css,scss,yml,yaml,md}'
+            exclude: 'CHANGELOG.md|CHANGELOG.tpl.md'
             run: npx prettier -w {staged_files} && git add {staged_files}
 commit-msg:
     commitline:
