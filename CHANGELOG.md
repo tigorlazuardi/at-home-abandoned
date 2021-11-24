@@ -1,49 +1,40 @@
 <a name="unreleased"></a>
-
 ## [Unreleased]
 
 ### Doc
+- added changelog
 
--   added changelog
-    
-    
+### Fix
+- **changelog:** fixed changelog format
+
+
 <a name="0.1.0"></a>
-
 ## 0.1.0 - 2021-11-24
-
 ### Chore
+- **hooks:** removed husky remains
 
--   **hooks:** removed husky remains
-    
-    ### Conf
+### Conf
+- **hooks:** migrated hook from husky to lefthook
 
--   **hooks:** migrated hook from husky to lefthook
-    
-    ### Config
+### Config
+- update configuration
 
--   update configuration
-    
-    ### Doc
+### Doc
+- cleaned up readme
 
--   cleaned up readme
-    
-    ### Feat
+### Feat
+- **changelog:** added changelog generation on lefthook
+- **css:** added class for sidebar icons
 
--   **changelog:** added changelog generation on lefthook
-    -   **css:** added class for sidebar icons
-    
-    ### Init
+### Init
+- format all files to follow new rules
 
--   format all files to follow new rules
-    
-    ### Learn
+### Learn
+- implemented sidebar discord like
 
--   implemented sidebar discord like
-    
-    ### Wip
+### Wip
+- **sidebar:** added support darkmode button toggle
+- **sidebar:** update sidebar to be functional
 
--   **sidebar:** added support darkmode button toggle
-    -   **sidebar:** update sidebar to be functional
-    
-    
+
 [Unreleased]: https://github.com/tigorlazuardi/at-home/compare/0.1.0...HEAD
