@@ -8,6 +8,9 @@
 ### Doc
 - added changelog
 
+### Feat
+- **dark-mode:** dark mode now persistent via local storage
+
 ### Fix
 - **changelog:** fixed changelog format
 

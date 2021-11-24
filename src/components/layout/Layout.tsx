@@ -4,7 +4,12 @@ import * as React from 'react'
 import SideBar from '../Sidebar/Sidebar'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-	const [dark, setDark] = React.useState(false)
+	const [dark, setDark] = React.useState(true)
+	React.useEffect(() => {
+		const falsey = window.localStorage.getItem('dark_mode') === 'false'
+		setDark(!falsey)
+		!falsey && window.localStorage.setItem('dark_mode', 'true')
+	}, [dark])
 	return (
 		<div
 			className={clsx({
@@ -13,10 +18,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				['bg-dark']: dark,
 			})}
 		>
-			<SideBar dark={dark} on_click={() => setDark(!dark)} />
-			<div className='sm:pl-16'>
-				{children}
-			</div>
+			<SideBar
+				dark={dark}
+				on_click={() => {
+					const next = !dark
+					setDark(next)
+					next
+						? window.localStorage.setItem('dark_mode', 'true')
+						: window.localStorage.setItem('dark_mode', 'false')
+				}}
+			/>
+			<div className='sm:pl-16'>{children}</div>
 		</div>
 	)
 }
