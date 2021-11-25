@@ -14,6 +14,7 @@
 
 ### Feat
 - **dark-mode:** dark mode now persistent via local storage
+- **main-page:** added profile picture
 - **main-page:** added introductory text
 
 ### Fix

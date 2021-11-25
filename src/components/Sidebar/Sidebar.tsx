@@ -27,7 +27,7 @@ const SideBar = ({ dark, icon_size, on_click }: SideBarProp) => {
 			<div className={'flex flex-grow justify-center items-end pb-4'}>
 				<SideBarIcon
 					icon={dark ? <FaMoon size={ico} /> : <FaSun size={ico} />}
-					text={`${dark ? 'Light' : 'Dark'} Mode`}
+					text={`${dark ? 'Dark' : 'Light'} Theme`}
 					on_click={on_click}
 				/>
 			</div>
