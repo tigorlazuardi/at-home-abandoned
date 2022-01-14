@@ -7,7 +7,8 @@ import { openGraph } from '@/lib/helper'
 const defaultMeta = {
 	title: '@Home. Personal Web Project Showcase and Server Monitoring',
 	siteName: '@Home',
-	description: 'Personal Website powered by NextJS and Tailwind. Server Monitoring using gRPC',
+	description:
+		'Personal Website powered by NextJS and Tailwind. Server Monitoring using gRPC',
 	url: 'https://tigor.web.id/web',
 	image: 'https://theodorusclarence.com/favicon/large-og.jpg',
 	type: 'website',
@@ -25,7 +26,9 @@ export default function Seo(props: SeoProps) {
 		...defaultMeta,
 		...props,
 	}
-	meta['title'] = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title
+	meta['title'] = props.templateTitle
+		? `${props.templateTitle} | ${meta.siteName}`
+		: meta.title
 
 	// Use siteName if there is templateTitle
 	// but show full title if there is none
@@ -56,9 +59,20 @@ export default function Seo(props: SeoProps) {
 			<meta name='twitter:image' content={meta.image} />
 			{meta.date && (
 				<>
-					<meta property='article:published_time' content={meta.date} />
-					<meta name='publish_date' property='og:publish_date' content={meta.date} />
-					<meta name='author' property='article:author' content='Theodorus Clarence' />
+					<meta
+						property='article:published_time'
+						content={meta.date}
+					/>
+					<meta
+						name='publish_date'
+						property='og:publish_date'
+						content={meta.date}
+					/>
+					<meta
+						name='author'
+						property='article:author'
+						content='Tigor Hutasuhut'
+					/>
 				</>
 			)}
 
@@ -67,7 +81,10 @@ export default function Seo(props: SeoProps) {
 				<link key={linkProps.href} {...linkProps} />
 			))}
 			<meta name='msapplication-TileColor' content='#ffffff' />
-			<meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
+			<meta
+				name='msapplication-TileImage'
+				content='/favicon/ms-icon-144x144.png'
+			/>
 			<meta name='theme-color' content='#ffffff' />
 		</Head>
 	)
