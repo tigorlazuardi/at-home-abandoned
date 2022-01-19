@@ -15,6 +15,9 @@
 ### Doc
 - added changelog
 
+### Docs
+- update readme.md
+
 ### Feat
 - **dark-mode:** dark mode now persistent via local storage
 - **main-page:** added profile picture
