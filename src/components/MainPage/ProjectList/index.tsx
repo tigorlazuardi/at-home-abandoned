@@ -12,13 +12,10 @@ export default function ProjectList() {
 					done.
 				</p>
 			</header>
-			<div className='flex'>
-				<ProjectDisplayCard />
-				<ProjectDisplayCard />
-				<ProjectDisplayCard />
-				<ProjectDisplayCard />
-				<ProjectDisplayCard />
-				<ProjectDisplayCard />
+			<div className='flex flex-wrap'>
+				{[0, 1, 2, 3, 4, 5].map((v) => (
+					<ProjectDisplayCard key={v} className='basis-1/4' />
+				))}
 			</div>
 		</section>
 	)
